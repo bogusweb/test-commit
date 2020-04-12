@@ -1,0 +1,525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lib CI should create PULL_REQUESTS.md 1`] = `
+"language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: true
+node_js:
+  - '10'
+branches:
+  except:
+    - /^v\\\\d+\\\\.\\\\d+\\\\.\\\\d+$/
+"
+`;
+
+exports[`lib files should create CODE_OF_CONDUCT.md 1`] = `
+"# Contributor Covenant Code of Conduct
+
+## Our Pledge
+
+In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+
+## Our Standards
+
+Examples of behavior that contributes to creating a positive environment include:
+
+* Using welcoming and inclusive language
+* Being respectful of differing viewpoints and experiences
+* Gracefully accepting constructive criticism
+* Focusing on what is best for the community
+* Showing empathy towards other community members
+
+Examples of unacceptable behavior by participants include:
+
+* The use of sexualized language or imagery and unwelcome sexual attention or advances
+* Trolling, insulting/derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others' private information, such as a physical or electronic address, without explicit permission
+* Other conduct which could reasonably be considered inappropriate in a professional setting
+
+## Our Responsibilities
+
+Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+
+Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+
+## Scope
+
+This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
+
+## Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at netanel7799@gmail.com. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+
+Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+
+## Attribution
+
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
+
+[homepage]: http://contributor-covenant.org
+[version]: http://contributor-covenant.org/version/1/4/
+"
+`;
+
+exports[`lib files should create CONTRIBUTING.md 1`] = `
+"# Contributing to Transloco
+
+🙏 We would ❤️ for you to contribute to Transloco and help make it even better than it is today!
+
+# Developing
+
+Start by installing all dependencies:
+
+\`\`\`bash
+npm i
+\`\`\`
+
+Run the tests:
+
+\`\`\`bash
+npm test
+npm run e2e
+\`\`\`
+
+Run the playground app:
+
+\`\`\`bash
+npm start
+\`\`\`
+
+## Building
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+## <a name=\\"rules\\"></a> Coding Rules
+
+To ensure consistency throughout the source code, keep these rules in mind as you are working:
+
+- All features or bug fixes **must be tested** by one or more specs (unit-tests).
+- All public API methods **must be documented**.
+
+## <a name=\\"commit\\"></a> Commit Message Guidelines
+
+We have very precise rules over how our git commit messages can be formatted. This leads to **more
+readable messages** that are easy to follow when looking through the **project history**. But also,
+we use the git commit messages to **generate the Transloco changelog**.
+
+### Commit Message Format
+
+Each commit message consists of a **header**, a **body** and a **footer**. The header has a special
+format that includes a **type**, a **scope** and a **subject**:
+
+\`\`\`
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+\`\`\`
+
+The **header** is mandatory and the **scope** of the header is optional.
+
+Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
+to read on GitHub as well as in various git tools.
+
+The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
+
+Samples: (even more [samples](https://github.com/angular/angular/commits/master))
+
+\`\`\`
+docs(changelog): update changelog to beta.5
+\`\`\`
+
+\`\`\`
+fix(release): need to depend on latest rxjs and zone.js
+
+The version in our package.json gets copied to the one we publish, and users need the latest of these.
+\`\`\`
+"
+`;
+
+exports[`lib files should create ISSUE_TEMPLATE.md 1`] = `
+"<!--
+PLEASE HELP US PROCESS GITHUB ISSUES FASTER BY PROVIDING THE FOLLOWING INFORMATION.
+
+ISSUES MISSING IMPORTANT INFORMATION MAY BE CLOSED WITHOUT INVESTIGATION.
+-->
+
+## I'm submitting a...
+
+<!-- Check one of the following options with \\"x\\" -->
+<pre><code>
+[ ] Regression (a behavior that used to work and stopped working in a new release)
+[ ] Bug report  <!-- Please search GitHub for a similar issue or PR before submitting -->
+[ ] Performance issue
+[ ] Feature request
+[ ] Documentation issue or request
+[ ] Support request
+[ ] Other... Please describe:
+</code></pre>
+
+## Current behavior
+
+<!-- Describe how the issue manifests. -->
+
+## Expected behavior
+
+<!-- Describe what the desired behavior would be. -->
+
+## Minimal reproduction of the problem with instructions
+
+## What is the motivation / use case for changing the behavior?
+
+<!-- Describe the motivation or the concrete use case. -->
+
+## Environment
+
+<pre><code>
+Angular version: X.Y.Z
+<!-- Check whether this is still an issue in the most recent Angular version -->
+
+Browser:
+- [ ] Chrome (desktop) version XX
+- [ ] Chrome (Android) version XX
+- [ ] Chrome (iOS) version XX
+- [ ] Firefox version XX
+- [ ] Safari (desktop) version XX
+- [ ] Safari (iOS) version XX
+- [ ] IE version XX
+- [ ] Edge version XX
+ 
+For Tooling issues:
+- Node version: XX  <!-- run \`node --version\` -->
+- Platform:  <!-- Mac, Linux, Windows -->
+
+Others:
+<!-- Anything else relevant?  Operating system version, IDE, package manager, HTTP server, ... -->
+</code></pre>
+"
+`;
+
+exports[`lib files should create PULL_REQUESTS.md 1`] = `""`;
+
+exports[`lib files should create README.md 1`] = `
+"<p align=\\"center\\">
+ <img width=\\"20%\\" height=\\"20%\\" src=\\"./logo.svg\\">
+</p>
+
+<br />
+
+[![spectator](https://img.shields.io/badge/tested%20with-spectator-2196F3.svg?style=flat-square)]()
+[![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
+[![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
+[![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![Build Status](https://travis-ci.org/transloco.svg?branch=master)](https://travis-ci.org/transloco)
+
+
+> The Library Slogan
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+Accusantium aliquid corporis cupiditate dolores eum exercitationem illo iure laborum minus nihil numquam odit officiis possimus quas quasi quos similique, temporibus veritatis? Exercitationem, iure magni nulla quo sapiente soluta. Esse?
+
+## Features
+
+- ✅ One
+- ✅ Two
+- ✅ Three
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [FAQ](#faq)
+
+## Installation
+
+### NPM
+
+\`npm install @ngneat/transloco --save-dev\`
+
+### Yarn
+
+\`yarn add @ngneat/transloco --dev\`
+
+## Usage
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+
+\`\`\`ts
+function helloWorld() {}
+\`\`\`
+
+## FAQ
+
+## How to ...
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ips
+"
+`;
+
+exports[`lib files should create commitlint.config.js 1`] = `
+"module.exports = {
+  extends: ['@commitlint/config-conventional']
+};
+"
+`;
+
+exports[`lib files should create prettier.config.js 1`] = `
+"module.exports = {
+  printWidth: 120,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  trailingComma: 'none',
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  arrowParens: 'avoid',
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  requirePragma: false,
+  insertPragma: false,
+  proseWrap: 'preserve'
+};
+"
+`;
+
+exports[`lib package.json should add config 1`] = `
+Object {
+  "commitizen": Object {
+    "path": "cz-conventional-changelog",
+  },
+}
+`;
+
+exports[`lib package.json should add devDependencies 1`] = `
+Object {
+  "@angular/cli": "~8.0.0",
+  "@angular/compiler-cli": "~8.2.14",
+  "@angular/language-service": "~8.2.14",
+  "@commitlint/cli": "8.1.0",
+  "@commitlint/config-angular": "^8.1.0",
+  "@commitlint/config-conventional": "^8.1.0",
+  "@ngneat/spectator": "^4.4.0",
+  "@types/jasmine": "~3.3.8",
+  "@types/jasminewd2": "~2.0.3",
+  "@types/node": "~8.9.4",
+  "all-contributors-cli": "^6.8.1",
+  "codelyzer": "^5.0.0",
+  "cross-env": "^5.2.0",
+  "husky": "^3.0.1",
+  "jasmine-core": "~3.4.0",
+  "jasmine-spec-reporter": "~4.2.1",
+  "karma": "~4.1.0",
+  "karma-chrome-launcher": "~2.2.0",
+  "karma-coverage-istanbul-reporter": "~2.0.1",
+  "karma-jasmine": "~2.0.1",
+  "karma-jasmine-html-reporter": "^1.4.0",
+  "lint-staged": "^9.2.0",
+  "prettier": "^1.18.2",
+  "protractor": "~5.4.0",
+  "standard-version": "^6.0.1",
+  "ts-node": "~7.0.0",
+  "tslint": "~5.15.0",
+  "typescript": "~3.5.3",
+}
+`;
+
+exports[`lib package.json should add husky 1`] = `
+Object {
+  "hooks": Object {
+    "commit-msg": "commitlint -e $GIT_PARAMS",
+    "pre-commit": "npm run hooks:pre-commit && lint-staged",
+    "pre-push": "npm run test:headless",
+  },
+}
+`;
+
+exports[`lib package.json should add lint-staged 1`] = `
+Object {
+  "*.{js,json,css,scss,ts,html,component.html}": Array [
+    "prettier --write",
+    "git add",
+  ],
+}
+`;
+
+exports[`lib package.json should add scripts 1`] = `
+Object {
+  "build": "ng build",
+  "build:lib": "ng build @ngneat/transloco && npm run copy",
+  "commit": "git-cz",
+  "contributors:add": "all-contributors add",
+  "e2e": "ng e2e",
+  "hooks:pre-commit": "node hooks/pre-commit.js",
+  "lint": "ng lint",
+  "ng": "ng",
+  "release": "cd projects/ngneat/transloco && standard-version --infile ../../../CHANGELOG.md",
+  "start": "ng serve",
+  "test": "ng test",
+  "test:headless": "cross-env CI=true npm run test:lib",
+  "test:lib": "ng test @ngneat/transloco",
+}
+`;
+
+exports[`lib with scope in name should add scripts with scope name 1`] = `
+Object {
+  "build": "ng build",
+  "build:lib": "ng build transloco",
+  "commit": "git-cz",
+  "contributors:add": "all-contributors add",
+  "e2e": "ng e2e",
+  "hooks:pre-commit": "node hooks/pre-commit.js",
+  "lint": "ng lint",
+  "ng": "ng",
+  "release": "cd projects/transloco && standard-version --infile ../../CHANGELOG.md",
+  "start": "ng serve",
+  "test": "ng test",
+  "test:headless": "cross-env CI=true npm run test:lib",
+  "test:lib": "ng test transloco",
+}
+`;
+
+exports[`lib with scope in name should have scope name in README.md 1`] = `
+"<p align=\\"center\\">
+ <img width=\\"20%\\" height=\\"20%\\" src=\\"./logo.svg\\">
+</p>
+
+<br />
+
+[![spectator](https://img.shields.io/badge/tested%20with-spectator-2196F3.svg?style=flat-square)]()
+[![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
+[![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
+[![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![Build Status](https://travis-ci.org/transloco.svg?branch=master)](https://travis-ci.org/transloco)
+
+
+> The Library Slogan
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+Accusantium aliquid corporis cupiditate dolores eum exercitationem illo iure laborum minus nihil numquam odit officiis possimus quas quasi quos similique, temporibus veritatis? Exercitationem, iure magni nulla quo sapiente soluta. Esse?
+
+## Features
+
+- ✅ One
+- ✅ Two
+- ✅ Three
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [FAQ](#faq)
+
+## Installation
+
+### NPM
+
+\`npm install transloco --save-dev\`
+
+### Yarn
+
+\`yarn add transloco --dev\`
+
+## Usage
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+
+\`\`\`ts
+function helloWorld() {}
+\`\`\`
+
+## FAQ
+
+## How to ...
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ips
+"
+`;
+
+exports[`lib with scope should add scripts with scope name 1`] = `
+Object {
+  "build": "ng build",
+  "build:lib": "ng build @ngneat/@ngneat/transloco && npm run copy",
+  "commit": "git-cz",
+  "contributors:add": "all-contributors add",
+  "e2e": "ng e2e",
+  "hooks:pre-commit": "node hooks/pre-commit.js",
+  "lint": "ng lint",
+  "ng": "ng",
+  "release": "cd projects/ngneat/@ngneat/transloco && standard-version --infile ../../../CHANGELOG.md",
+  "start": "ng serve",
+  "test": "ng test",
+  "test:headless": "cross-env CI=true npm run test:lib",
+  "test:lib": "ng test @ngneat/@ngneat/transloco",
+}
+`;
+
+exports[`lib with scope should have scope name in README.md 1`] = `
+"<p align=\\"center\\">
+ <img width=\\"20%\\" height=\\"20%\\" src=\\"./logo.svg\\">
+</p>
+
+<br />
+
+[![spectator](https://img.shields.io/badge/tested%20with-spectator-2196F3.svg?style=flat-square)]()
+[![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square)]()
+[![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
+[![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+[![Build Status](https://travis-ci.org/@ngneat/transloco.svg?branch=master)](https://travis-ci.org/@ngneat/transloco)
+
+
+> The Library Slogan
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+Accusantium aliquid corporis cupiditate dolores eum exercitationem illo iure laborum minus nihil numquam odit officiis possimus quas quasi quos similique, temporibus veritatis? Exercitationem, iure magni nulla quo sapiente soluta. Esse?
+
+## Features
+
+- ✅ One
+- ✅ Two
+- ✅ Three
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [FAQ](#faq)
+
+## Installation
+
+### NPM
+
+\`npm install @ngneat/@ngneat/transloco --save-dev\`
+
+### Yarn
+
+\`yarn add @ngneat/@ngneat/transloco --dev\`
+
+## Usage
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ipsam iste iure, maxime modi molestiae nihil obcaecati odit officiis pariatur quibusdam suscipit temporibus unde.
+
+\`\`\`ts
+function helloWorld() {}
+\`\`\`
+
+## FAQ
+
+## How to ...
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque blanditiis cum delectus eligendi ips
+"
+`;

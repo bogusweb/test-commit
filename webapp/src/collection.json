@@ -1,0 +1,17 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "extends": ["@ngneat/spectator"],
+  "schematics": {
+    "ng-add": {
+      "schema": "./lib/schema.json",
+      "description": "Generates open source boilerplate with angular lib.",
+      "factory": "./lib/index#lib",
+      "aliases": ["init"]
+    },
+    "lib": {
+      "schema": "./lib/schema.json",
+      "description": "Generates open source boilerplate with angular lib.",
+      "factory": "./lib/index#lib"
+    }
+  }
+}
